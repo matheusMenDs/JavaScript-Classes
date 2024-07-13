@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program5</title>
+    <style>
+        body{    /*AQUI NO CSS CONTINUA PRECISANDO POR O ; NO FINAL*/
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>    //FORMATAÇÃO DE TEXTOS
+        var nome = window.prompt('Qual é seu nome: ')
+        document.writeln(`Olá, <strong>${nome}</strong>, Seu nome tem ${nome.length} letras.<br>`)//... .lenght É O TAMANHO
+        //PULAR A LINHA (POR ESSE ln DEPOIS DE write)
+        //PULAR LINHA TBM PODE SER </br> NO FINAL DA linha
+        //POR E NEGRITO <strong> ANTES DE ${nome} E DEPOIS TBM COM A CHAVE DE FECHAMENTO
+
+        //document.write = ESCREVA NO documento (NÃO NA window)
+        //PODE COLOCAR O <h2> ALI NO MEIO QUE ELE VAI RECONHECER TBM
+        document.write(`Seu nome em maiúsculas é: ${nome.toUpperCase()}</br>`)
+        //.toUpperCase() = DEIXAR EM MAIÚSCULO 
+        document.write(`Seu nome em minúsculas é: ${nome.toLowerCase()}`)
+        //.toLowerCase() = DEIXAR EM MINÚSCULO
+        
+              //FORMATAÇÃO DE NÚMEROS
+              //CRTL V DO TESTE FEITO NO terminal
+//> var n1 = 1545.3       
+//undefined
+//> n1
+//1545.3
+//> n1.toFixed(2)     MUDANDO PARA TER 2 CASAS DEPOIS DO PONTO
+//'1545.30'
+//> n1.toFixed(2).replace('.', ',')    PARTE DO REPLACE PARA TROCAR O . POR UMA , CASO QUEIRA  
+//'1545,30'     RESULTADO
+
+            //FORMATAÇÃO MUDANDO UM VALOR PARA brl, usd ou eur (REAL, DOLAR OU EURO)
+            //CTRL V DO TESTE FEITO NO TERMINAL
+//> n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+//'R$ 1.545,30'
+//> n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})
+//'US$ 1.545,30'
+//> n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})
+//'€ 1.545,30'
+    </script>
+</body>
+</html>

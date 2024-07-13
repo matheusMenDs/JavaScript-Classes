@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program4</title>
+    <style> 
+    
+    /*ESSE É O MESMO CÓDIGO DO ARQUIVO ex3.html,
+    SENDO USADO COMO ESQUELETO PARA APRIORAMENTO*/
+
+        body{   /*CSS*/
+            background-color: rgb(139, 139, 240);
+            color: rgb(0, 0, 0);
+            font: normal 20pt Arial;       
+        } 
+        h1{
+            color: rgb(171, 7, 7);    
+        }
+    </style>
+</head>
+
+<body> 
+    <h1>Olá, mundo!</h1>   
+    <p>sem maldição</p>       <!--HTML-->    
+
+
+    <script>                   //JAVA SCRIPT
+
+    //O SINAL + SERVE TANTO PARA ADIÇÃO QUANTO PARA CONCATENAÇÃO
+    //number + number = ADIÇÃO
+    //string + string = CONCATENAÇÃO
+
+        /*var n1 = window.prompt("Digite um número: ")//VALOR COMO string
+        var n2 = window.prompt("Digite outro número: ")//VALOR COMO string*/
+
+        //NECESSÁRIO FAZER UMA CONVERSÃO DE string PARA número
+        //Number.parseInt(n) n = número digitado pelo cliente
+        //Number.parseFloat(n) n = número digitado pelo cliente
+
+        //MUDANDO O VALOR DE string PARA number PARA PODER SOMAR
+        //SE DEIXAR SÓ O number(sem o parse... ele também vai dar certo, TANTO PRA int TANTO PRA float)
+        
+        var n1 = Number.parseFloat(window.prompt("Digite um número: "))//VALOR COMO string
+        var n2 = Number.parseFloat(window.prompt("Digite outro número: "))//VALOR COMO string
+        var s = n1 + n2
+        window.alert("A soma dos valores é: " + s)
+        //window.alert("A soma entre ${n1} e ${n2} é igual a: ${s}") 
+        //UTILIZANDO A TÉCNICA DESCRITA MAIS EMBAIXO 
+
+        //DE number PARA string É: String(n) OU n.toString(), PORÉM PODE ESCREVER JÁ DIRETO AQUI, ONDE ELE VAI LER
+        // NO CASO FICARIA ... + s.toString() OU String(s)
+        //SE POR ESSE FIM COMO string, A SOMA AINDA VAI DAR CERTO, PORÉM VICE-VERSA NÃO DARIA O MESMO RESULTADO
+    
+        
+//CTRL V DO TESTE FEITO NO TERMINAL PARA DECLARAR E LER VARIÁVEIS:
+//USO DE ${} NOS valores DAS VARIÁVEIS PARA FACILITAR A ESCRITA PARA A LEITURA
+//> var nome = 'matheus'
+//undefined
+//> var idade = 40
+//40
+//> var nota = 5.5
+//5.5
+//> 'O aluno ' + nome + ' com nota: ' + nota + ' tem ' + idade + ' anos'
+//'O aluno matheus com nota: 5.5 tem 40 anos'
+//>
+//> `O aluno ${nome} com ${idade} anos tirou a nota ${nota}`
+//'O aluno matheus com 40 anos tirou a nota 5.5'
+//>
+
+// PARA ISSO FUNCIONAR TEM QUE USAR A CRASE(`) AO INVÉS DAS ASPAS('')
+        //window.alert(`A soma entre ${n1} e ${n2} é igual a: ${s}`) 
+
+    </script>
+</body>
+</html>
